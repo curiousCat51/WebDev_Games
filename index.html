@@ -6,55 +6,71 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta property="og:title" content="Portal Wiki" />
         <meta property="og:description" content="Information portal for the Portal series by Valve" />
+        <link rel="stylesheet" href="website_design/main.css" crossorigin="anonymous">
+        <link rel="icon" href="img-portal_wiki/Portal Icon.ico">
+        <script src="website_functions/main.js" async></script>
     </head>
     <body>
         <header>
-            <img src="img-portal_wiki/Portal_logo.png" alt="Portal Logo" />
+
+            <div class="flex-box">
+                <img src="img-portal_wiki/Portal_logo.png" alt="Portal Logo" />
+
+                <search>
+                    <form action="index.html" method="get">
+                        <input type="search" name="q"/>
+                        <button type="submit">Search</button>
+                    </form>
+                </search>
+            </div>
 
             <nav>
-                <ul>
-                    <li>
-                        <details>
-                            <summary>Games</summary>
-                            <p><a href="games/Portal.html">Portal</a></p>
-                            <p><a href="games/Portal 2.html">Portal 2</a></p>
-                        </details>
-                    </li>
-                    <li>
-                        <details>
-                            <summary>Characters</summary>
-                            <p><a href="characters/Chell.html">Chell</a></p>
-                            <p><a href="characters/GLaDOS.html">GLaDOS</a></p>
-                            <p><a href="characters/Cave_Johnson.html">Cave Johnson</a></p>
-                            <p><a href="characters/Wheatley.html">Wheatley</a></p>
-                            <p><a href="characters/Atlas.html">Atlas</a></p>
-                            <p><a href="characters/P-body.html">P-body</a></p>
-                            <p><a href="characters/Caroline.html">Caroline</a></p>
-                            <p><a href="characters/Hoopy the Hoop.html">Hoopy the Hoop</a></p>
-                        </details>
-                    </li>
-                    <li>
-                        <details>
-                            <summary>Game Mechanics</summary>
-                            <p><a href="game_mechanics/Test Chambers.html">Test Chambers</a></p>
-                            <p><a href="game_mechanics/Cubes.html">Cubes</a></p>
-                            <p><a href="game_mechanics/Turrets.html">Turrets</a></p>
-                            <p><a href="game_mechanics/Handheld Portal Gun.html">Handheld Portal Gun</a></p>
-                            <p><a href="game_mechanics/Material Emancipation Grill.html">Material Emancipation Grill</a></p>
-                            <p><a href="game_mechanics/High Energy Pellet.html">High Energy Pellet</a></p>
-                            <p><a href="game_mechanics/Gels.html">Gels</a></p>
-                            <p><a href="game_mechanics/Portals.html">Portals</a></p>
-                        </details>
-                    </li>
-                    <li>
-                        <details>
-                            <summary>Game Modes</summary>
-                            <p><a href="game_modes/Story Mode.html">Story Mode</a></p>
-                            <p><a href="game_modes/Co-Op Mode.html">Co-Op Mode</a></p>
-                            <p><a href="game_modes/Community Test Chambers.html">Community Test Chambers</a></p>
-                        </details>
-                    </li>
-                </ul>
+                <div class="flex-container">
+                    <details>
+                        <summary>Games</summary>
+                        <ul>
+                            <a href="games/Portal.html"><li>Portal</li></a>
+                            <a href="games/Portal 2.html"><li>Portal 2</li></a>
+                        </ul>
+                    </details>
+
+                    <details>
+                        <summary>Characters</summary>
+                        <ul>
+                            <a href="characters/Chell.html"><li>Chell</li></a>
+                            <a href="characters/GLaDOS.html"><li>GLaDOS</li></a>
+                            <a href="characters/Cave_Johnson.html"><li>Cave Johnson</li></a>
+                            <a href="characters/Wheatley.html"><li>Wheatley</li></a>
+                            <a href="characters/Atlas.html"><li>Atlas</li></a>
+                            <a href="characters/P-body.html"><li>P-body</li></a>
+                            <a href="characters/Caroline.html"><li>Caroline</li></a>
+                            <a href="characters/Hoopy the Hoop.html"><li>Hoopy the Hoop</li></a>
+                        </ul>
+                    </details>
+
+                    <details>
+                        <summary>Game Mechanics</summary>
+                        <ul>
+                            <a href="game_mechanics/Test Chambers.html"><li>Test Chambers</li></a>
+                            <a href="game_mechanics/Cubes.html"><li>Cubes</li></a>
+                            <a href="game_mechanics/Turrets.html"><li>Turrets</li></a>
+                            <a href="game_mechanics/Handheld Portal Device.html"><li>Handheld Portal Device</li></a>
+                            <a href="game_mechanics/Material Emancipation Grill.html"><li>Material Emancipation Grill</li></a>
+                            <a href="game_mechanics/High Energy Pellet.html"><li>High Energy Pellet</li></a>
+                            <a href="game_mechanics/Gels.html"><li>Gels</li></a>
+                            <a href="game_mechanics/Portals.html"><li>Portals</li></a>
+                        </ul>
+                    </details>
+
+                    <details>
+                        <summary>Game Modes</summary>
+                        <ul>
+                            <a href="game_modes/Story Mode.html"><li>Story Mode</li></a>
+                            <a href="game_modes/Co-Op Mode.html"><li>Co-Op Mode</li></a>
+                            <a href="game_modes/Community Test Chambers.html"><li>Community Test Chambers</li></a>
+                        </ul>
+                    </details>
+                </div>
             </nav>
         </header>
         <main>
