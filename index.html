@@ -13,19 +13,24 @@
     <body>
         <header>
 
-            <div class="flex-box">
+            <figure id="logo">
                 <img src="img-portal_wiki/Portal_logo.png" alt="Portal Logo" />
+            </figure>
 
-                <search>
-                    <form action="index.html" method="get">
-                        <input type="search" name="q"/>
-                        <button type="submit">Search</button>
-                    </form>
-                </search>
-            </div>
+            <search id="search-area">
+                <form id="search-area" action="index.html" method="get">
+                    <input type="search" name="q"/>
+                    <button type="submit">Search</button>
+                </form>
+            </search>
+            
+            <button id="menuToggle" aria-expanded="false" aria-controls="sideMenu">Menü</button>
 
-            <nav>
-                <div class="flex-container">
+            <nav id="sideMenu" class="side-menu" aria-label="Seitenmenü">
+
+                <button id="closeMenu" aria-label="Menü schließen">&times;</button>
+
+                <div class="grid-container">
                     <details>
                         <summary>Games</summary>
                         <ul>
@@ -65,9 +70,7 @@
                     <details>
                         <summary>Game Modes</summary>
                         <ul>
-                            <a href="game_modes/Story Mode.html"><li>Story Mode</li></a>
-                            <a href="game_modes/Co-Op Mode.html"><li>Co-Op Mode</li></a>
-                            <a href="game_modes/Community Test Chambers.html"><li>Community Test Chambers</li></a>
+                            <a href="game_modes/Game Modes.html"><li>Game Modes</li></a>
                         </ul>
                     </details>
                 </div>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Game Mechanics - Portals</title>
+        <link rel="stylesheet" href="../website_design/main.css" crossorigin="anonymous">
+        <link rel="icon" href="img-portal_wiki/Portal Icon.png">
+    </head>
+    <body>
+        <header>
+            <h1>Portals</h1>
+            <p>
+                Portals are the main mechanic in both Portal and Portal 2. They are placed onto flat, compatable surfaces by the player via the Handheld Portal Device.
+            </p>
+            <figure>
+                <img src="../img-portal_wiki/Portals.png" alt="Portals"/>
+            </figure>
+        </header>
+        <main>
+            <section>
+                <h2>Content</h2>
+                <ul>
+                    <li><a href="#Overview">Overview</a></li>
+                    <li><a href="#Behind the scenes">Behind the scenes</a></li>
+                </ul>
+            </section>
+            <section>
+                <h2 id="Overview">Overview</h2>
+                <p>
+                    Firing the Handheld Portal Device creates linked portals on valid surfaces. An upaired Portal acts like a solid wall. The player can place a maximum of 2 Portals, every new Portal removes an old one. Each of the two Portals has a seperate color, one is orange while the other is blue.
+                </p>
+                <p>
+                    When entering a portal with speed, this speed is carried over to the exit portal. The direction and rotation aligns with the exit portal's orientation. This allows the player to travel bigger distances, for example for launching across gaps.
+                </p>
+                <p>
+                    Cubes, Turrets, players and puzzle beams - such as Thermal Discouragement Beams, Excursion Funnels and Hard Light Bridges are able to pass through portals.
+                </p>
+            </section>
+            <section>
+                <h2 id="Behind the scenes">Behind the scenes</h2>
+                <p>
+                    Portals act like windows into another view. The game renders the scene from the exit portal's perspective and uses rendering masks (such as stencil buffers) and camera adjustments so the view aligns with where you stand and avoids overlapping geometry
+                </p>
+                <p>
+                    When a player or object crosses the portal plane, collision handling adjusts so they do not get stuck on the wall, repositions them at the exit portal, and transforms their velocity and orientation to match the exit.
+                </p>
+            </section>
+        </main>
+    </body>
+</html>

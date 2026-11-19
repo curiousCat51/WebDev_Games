@@ -1,7 +1,15 @@
-let variable1 = [1, 2, 3];
-let variable2 = variable1;
+const menu = document.getElementById('sideMenu');
+const toggleBtn = document.getElementById('menuToggle');
+const closeBtn = document.getElementById('closeMenu');
 
-variable1.push(4);
+function setMenuOpen(isOpen) {
+  menu.classList.toggle('is-open', isOpen);
+  toggleBtn.setAttribute('aria-expanded', String(isOpen));
+}
 
-console.log(variable1);
-console.log(variable2);
+toggleBtn.addEventListener('click', () => {
+  const isOpen = !menu.classList.contains('is-open');
+  setMenuOpen(isOpen);
+});
+
+closeBtn.addEventListener('click', () => setMenuOpen(false));

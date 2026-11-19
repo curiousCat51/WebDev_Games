@@ -1,62 +1,69 @@
 body{
-    background-color: #8b8b8b;
-}
-
-header{
-    background-color: #cdb745bb;
-    padding: 10px;
-    margin: 10px;
-    border: 2px solid black;
-}
-
-section{
-    background-color: #d6d6d6bb;
-    padding: 10px;
-    margin: 10px;
-    border: 2px solid black;
-    content-visibility: auto;
-    content-alignment: auto;
-}
-
-figure{
-    float: right;
-    border: 2px solid black;
-}
-
-nav div{
-    list-style-type: none;
+    display: grid;
     margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #723f0ebb;
+    padding:0;
+    grid-template-columns: 100%;
+    grid-template-rows: 2fr 1fr;
+    grid-template-areas: 
+        "head head";
 
-    &ul {
-        list-style-type: numeric;
-        margin: 0;
+    & header{
+        grid-area: head;
+
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+            "logo search-area"
+            ". nav";
+
+        & figure{
+
+            margin: 0;
+            width:fit-content;
+            max-width: 100%;
+
+            & img{
+
+                max-width: 100%;
+                height: auto;
+                display: grid;
+            }
+        }
+
+        & .search-area{
+            grid-area: search-area;
+        }
     }
 }
 
-.flex-container {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    align-items:baseline;
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 260px;
+  height: 100vh;
+  background: #1e1e2f;
+  color: #fff;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  padding: 1.5rem;
+  z-index: 1000;
 }
 
-.flex-box {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
+.side-menu.is-open {
+  transform: translateX(0);
 }
 
-
-
-search {
-    margin-left: auto;
-    float: right;
+.side-menu ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
 }
 
-search form {
-    display: flex;
-    align-items: center;
+.side-menu a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 0.5rem 0;
 }
