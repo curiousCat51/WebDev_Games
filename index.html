@@ -10,72 +10,62 @@
         <link rel="icon" href="img-portal_wiki/Portal Icon.ico">
         <script src="website_functions/main.js" async></script>
     </head>
-    <body>
+    <body>        
         <header>
+            <div class="navbar">
+                <div class="nav-left">
+                <button id="menuToggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="sideMenu">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </button>
 
-            <figure id="logo">
-                <img src="img-portal_wiki/Portal_logo.png" alt="Portal Logo" />
-            </figure>
-
-            <search id="search-area">
-                <form id="search-area" action="index.html" method="get">
-                    <input type="search" name="q"/>
-                    <button type="submit">Search</button>
-                </form>
-            </search>
-            
-            <button id="menuToggle" aria-expanded="false" aria-controls="sideMenu">Menü</button>
-
-            <nav id="sideMenu" class="side-menu" aria-label="Seitenmenü">
-
-                <button id="closeMenu" aria-label="Menü schließen">&times;</button>
-
-                <div class="grid-container">
-                    <details>
-                        <summary>Games</summary>
-                        <ul>
-                            <a href="games/Portal.html"><li>Portal</li></a>
-                            <a href="games/Portal 2.html"><li>Portal 2</li></a>
-                        </ul>
-                    </details>
-
-                    <details>
-                        <summary>Characters</summary>
-                        <ul>
-                            <a href="characters/Chell.html"><li>Chell</li></a>
-                            <a href="characters/GLaDOS.html"><li>GLaDOS</li></a>
-                            <a href="characters/Cave_Johnson.html"><li>Cave Johnson</li></a>
-                            <a href="characters/Wheatley.html"><li>Wheatley</li></a>
-                            <a href="characters/Atlas.html"><li>Atlas</li></a>
-                            <a href="characters/P-body.html"><li>P-body</li></a>
-                            <a href="characters/Caroline.html"><li>Caroline</li></a>
-                            <a href="characters/Hoopy the Hoop.html"><li>Hoopy the Hoop</li></a>
-                        </ul>
-                    </details>
-
-                    <details>
-                        <summary>Game Mechanics</summary>
-                        <ul>
-                            <a href="game_mechanics/Test Chambers.html"><li>Test Chambers</li></a>
-                            <a href="game_mechanics/Cubes.html"><li>Cubes</li></a>
-                            <a href="game_mechanics/Turrets.html"><li>Turrets</li></a>
-                            <a href="game_mechanics/Handheld Portal Device.html"><li>Handheld Portal Device</li></a>
-                            <a href="game_mechanics/Material Emancipation Grill.html"><li>Material Emancipation Grill</li></a>
-                            <a href="game_mechanics/High Energy Pellet.html"><li>High Energy Pellet</li></a>
-                            <a href="game_mechanics/Gels.html"><li>Gels</li></a>
-                            <a href="game_mechanics/Portals.html"><li>Portals</li></a>
-                        </ul>
-                    </details>
-
-                    <details>
-                        <summary>Game Modes</summary>
-                        <ul>
-                            <a href="game_modes/Game Modes.html"><li>Game Modes</li></a>
-                        </ul>
-                    </details>
+                <a href="#" class="logo">
+                    <img src="img-portal_wiki/Portal_logo.png" alt="Portal Wiki Logo">
+                </a>
                 </div>
-            </nav>
+
+                <!-- Suchleiste -->
+                <div class="search-box">
+                <input type="search" id="wikiSearch" placeholder="Wiki durchsuchen..." aria-label="Wiki durchsuchen">
+                <button type="button" id="searchBtn" aria-label="Suchen">🔍</button>
+                </div>
+
+                <nav id="sideMenu" class="sideMenu">
+                <ul>
+                    <li class="menu-category">Games</li>
+                    <li><a href="#portal">Portal</a></li>
+                    <li><a href="#portal-2">Portal 2</a></li>
+
+                    <li class="menu-category">Characters</li>
+                    <li><a href="characters/Chell.html">Chell</a></li>
+                    <li><a href="characters/GLaDOS.html">GLaDOS</a></li>
+                    <li><a href="characters/Cave_Johnson.html">Cave Johnson</a></li>
+                    <li><a href="characters/Wheatley.html">Wheatley</a></li>
+                    <li><a href="characters/Atlas.html">Atlas</a></li>
+                    <li><a href="characters/P-body.html">P-body</a></li>
+                    <li><a href="characters/Caroline.html">Caroline</a></li>
+                    <li><a href="characters/Hoopy the hoop.html">Hoopy the Hoop</a></li>
+
+                    <li class="menu-category">Game Mechanics</li>
+                    <li><a href="#test-chambers">Test Chambers</a></li>
+                    <li><a href="#cubes">Cubes</a></li>
+                    <li><a href="#turrets">Turrets</a></li>
+                    <li><a href="#portal-gun">Handheld Portal Device</a></li>
+                    <li><a href="#grill">Material Emancipation Grill</a></li>
+                    <li><a href="#pellet">High Energy Pellet</a></li>
+                    <li><a href="#gels">Gels</a></li>
+                    <li><a href="#portals">Portals</a></li>
+
+                    <li class="menu-category">Game Modes</li>
+                    <li><a href="#game-modes">Game Modes</a></li>
+                </ul>
+                </nav>
+                
+                <div class="menu-overlay"></div>
+            </div>
         </header>
+
         <main>
 
         </main>
