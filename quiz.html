@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aperture Science Eignungstest – Portal Wiki</title>
+    <link rel="icon" type="image/png" href="assets/images/portal-icon.png">
+    <link rel="stylesheet" href="assets/css/main.css">
+    </head>
+    <body>
+
+    <!-- Wird automatisch durch assets/js/main.js gefüllt -->
+    <div id="header-placeholder"></div>
+
+    <main class="wiki-container">
+        
+        <!-- Brotkrumen-Navigation -->
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Startseite</a> <span>//</span> <strong>Aperture Eignungstest</strong>
+        </nav>
+
+        <section class="quiz-box">
+        
+        <!-- 1. START-BILDSCHIRM -->
+        <div id="quiz-start-screen" class="quiz-screen">
+            <span class="chamber-badge">TESTING PROTOCOL // EVALUATION</span>
+            <h1>Aperture Science Wissenstest</h1>
+            <p>
+            Willkommen im automatisierten Bewertungszentrum. Beantworte <strong>15 Fragen</strong> zu den Testkammern, Charakteren und Technologien von Aperture Science.
+            </p>
+
+            <div class="subject-input-group">
+            <label for="subjectName">Bezeichnung des Testsubjekts (für die Bestenliste):</label>
+            <input type="text" id="subjectName" placeholder="z. B. Chell oder Testsubjekt #1498" maxlength="20">
+            </div>
+
+            <button type="button" id="startQuizBtn" class="portal-btn blue">Testkammer betreten →</button>
+        </div>
+
+        <!-- 2. FRAGEN-BILDSCHIRM (anfangs versteckt) -->
+        <div id="quiz-question-screen" class="quiz-screen hidden">
+            <div class="quiz-progress-header">
+            <span id="questionCounter">Frage 1 von 15</span>
+            <span id="currentScoreDisplay">Punkte: 0</span>
+            </div>
+
+            <!-- Fortschrittsbalken -->
+            <div class="progress-track">
+            <div id="progressBar" class="progress-fill" style="width: 0%;"></div>
+            </div>
+
+            <h2 id="questionText" class="quiz-question-title">Hier erscheint die Frage...</h2>
+
+            <!-- Antwort-Buttons werden per JS gefüllt -->
+            <div id="answerButtons" class="answer-grid"></div>
+
+            <!-- Feedback-Box nach der Antwort -->
+            <div id="feedbackBox" class="feedback-box hidden">
+            <p id="feedbackText"></p>
+            <button type="button" id="nextQuestionBtn" class="portal-btn orange">Nächste Frage →</button>
+            </div>
+        </div>
+
+        <!-- 3. ERGEBNIS-BILDSCHIRM (anfangs versteckt) -->
+        <div id="quiz-result-screen" class="quiz-screen hidden">
+            <span class="chamber-badge">TEST COMPLETE // EVALUATION REPORT</span>
+            <h1>Testergebnis</h1>
+            
+            <div class="final-score-display">
+            <span id="finalScoreNumber">0</span> / <span id="finalTotalNumber">15</span> Punkte
+            </div>
+
+            <blockquote class="aperture-quote">
+            <span id="gladosComment">„Auswertung läuft...“</span>
+            <cite>— GLaDOS, Central AI Core</cite>
+            </blockquote>
+
+            <!-- Geheimes Kuchen-Easter-Egg (nur bei 15/15 Punkten sichtbar) -->
+            <div id="cakeEasterEgg" class="cake-reward hidden">
+            <div class="cake-icon">🎂🕯️</div>
+            <h3>PROJEKT-BELOHNUNG FREIGESCHALTET</h3>
+            <p><strong>Der Kuchen ist KEINE Lüge!</strong></p>
+            <p class="cake-recipe">
+                Offizielles Aperture-Rezept: 1 Schokoladen-Biskuitboden, 1 Tasse Kirschfüllung, 2 Tassen Schlagsahne, 1 Portion Schokoraspel – und genau 1 brennende Kerze.
+            </p>
+            </div>
+
+
+            <div class="result-actions">
+            <button type="button" id="restartQuizBtn" class="portal-btn blue">Test wiederholen ↻</button>
+            <a href="index.html" class="portal-btn orange">Zur Bestenliste auf der Startseite →</a>
+            </div>
+        </div>
+
+        </section>
+
+    </main>
+
+    <!-- Wird automatisch durch assets/js/main.js gefüllt -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Erst das Hauptskript für Header/Footer, danach die Quiz-Logik -->
+    <script src="assets/js/translations.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/quiz.js"></script>
+    </body>
+</html>

@@ -1,76 +1,175 @@
 <!DOCTYPE html>
 <html lang="de">
     <head>
-        <title>Portal Wiki</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta property="og:title" content="Portal Wiki" />
-        <meta property="og:description" content="Information portal for the Portal series by Valve" />
-        <link rel="stylesheet" href="website_design/main.css" crossorigin="anonymous">
-        <link rel="icon" href="img-portal_wiki/Portal Icon.ico">
-        <script src="website_functions/main.js" async></script>
+        <title>Portal Wiki – Aperture Science Enrichment Center</title>
+        <link rel="icon" type="image/png" href="assets/images/portal-icon.png">
+        <link rel="stylesheet" href="assets/css/main.css">
     </head>
-    <body>        
-        <header>
-            <div class="navbar">
-                <div class="nav-left">
-                <button id="menuToggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="sideMenu">
-                    <span class="line"></span>
-                    <span class="line"></span>
-                    <span class="line"></span>
-                </button>
+    <body>
+        <div id="header-placeholder"></div>
 
-                <a href="#" class="logo">
-                    <img src="img-portal_wiki/Portal_logo.png" alt="Portal Wiki Logo">
-                </a>
+            <main class="wiki-container">
+    
+                <!-- 1. APERTURE SYSTEM-STATUSLEISTE -->
+                <div class="aperture-status-bar">
+                <div class="status-left">
+                    <span class="status-dot"></span>
+                    <span>ENRICHMENT CENTER NETWORK // ONLINE</span>
+                </div>
+                <div class="status-right">
+                    <span>NEUROTOXIN LEVEL: 0.00%</span>
+                    <span class="divider">|</span>
+                    <span>TEST SUBJECTS ACTIVE: 01</span>
+                </div>
                 </div>
 
-                <!-- Suchleiste -->
-                <div class="search-box">
-                <input type="search" id="wikiSearch" placeholder="Wiki durchsuchen..." aria-label="Wiki durchsuchen">
-                <button type="button" id="searchBtn" aria-label="Suchen">🔍</button>
+                <!-- 2. HERO-BANNER MIT APERTURE-LOGO-BLENDE -->
+                <section class="wiki-hero aperture-hero">
+                <div class="hero-text">
+                    <span class="chamber-badge">TEST CHAMBER 00 // CENTRAL DATABASE</span>
+                    <h1>Willkommen im Aperture Science Wiki</h1>
+                    <p>
+                    Das offizielle Archiv für Testsubjekte, KI-Kerne, Quantentunnel-Geräte und wissenschaftliche Testprotokolle. <em>„Wir tun, was wir müssen, weil wir es können.“</em>
+                    </p>
+                    <div class="hero-warnings">
+                    <span title="Vorsicht vor fallenden Kuben">📦 Kuben</span>
+                    <span title="Tödliche Laserstrahlen">⚡ Laser</span>
+                    <span title="Automatisierte Geschütztürme">🎯 Turrets</span>
+                    <span title="Kuchen-Garantie">🎂 Kuchen*</span>
+                    </div>
                 </div>
 
-                <nav id="sideMenu" class="sideMenu">
-                <ul>
-                    <li class="menu-category">Games</li>
-                    <li><a href="#portal">Portal</a></li>
-                    <li><a href="#portal-2">Portal 2</a></li>
+                <!-- Dekorative CSS-Aperture-Blende rechts im Banner -->
+                <div class="aperture-emblem" aria-hidden="true">
+                    <div class="aperture-ring"></div>
+                    <div class="aperture-core"></div>
+                </div>
+                </section>
 
-                    <li class="menu-category">Characters</li>
-                    <li><a href="characters/Chell.html">Chell</a></li>
-                    <li><a href="characters/GLaDOS.html">GLaDOS</a></li>
-                    <li><a href="characters/Cave_Johnson.html">Cave Johnson</a></li>
-                    <li><a href="characters/Wheatley.html">Wheatley</a></li>
-                    <li><a href="characters/Atlas.html">Atlas</a></li>
-                    <li><a href="characters/P-body.html">P-body</a></li>
-                    <li><a href="characters/Caroline.html">Caroline</a></li>
-                    <li><a href="characters/Hoopy the hoop.html">Hoopy the Hoop</a></li>
+                <!-- 3. HAUPT-KATEGORIEN (3 SPALTEN) -->
+                <section class="wiki-grid">
+                <article class="wiki-card">
+                    <div class="card-header blue">01 // Games</div>
+                    <div class="card-body">
+                    <h2>Die Spiele-Reihe</h2>
+                    <p>Erfahre alles über die Handlung, Entwicklung und Testkammern von <strong>Portal</strong> (2007) und <strong>Portal 2</strong> (2011).</p>
+                    <a href="pages/games/portal.html" class="portal-btn blue">Zu den Spielen →</a>
+                    </div>
+                </article>
 
-                    <li class="menu-category">Game Mechanics</li>
-                    <li><a href="#test-chambers">Test Chambers</a></li>
-                    <li><a href="#cubes">Cubes</a></li>
-                    <li><a href="#turrets">Turrets</a></li>
-                    <li><a href="#portal-gun">Handheld Portal Device</a></li>
-                    <li><a href="#grill">Material Emancipation Grill</a></li>
-                    <li><a href="#pellet">High Energy Pellet</a></li>
-                    <li><a href="#gels">Gels</a></li>
-                    <li><a href="#portals">Portals</a></li>
+                <article class="wiki-card">
+                    <div class="card-header orange">02 // Personnel & AIs</div>
+                    <div class="card-body">
+                    <h2>Charaktere & KIs</h2>
+                    <p>Von Testsubjekt Chell über GLaDOS und Wheatley bis hin zum Aperture-Gründer Cave Johnson.</p>
+                    <a href="pages/characters/glados.html" class="portal-btn orange">Charaktere ansehen →</a>
+                    </div>
+                </article>
 
-                    <li class="menu-category">Game Modes</li>
-                    <li><a href="#game-modes">Game Modes</a></li>
-                </ul>
-                </nav>
-                
-                <div class="menu-overlay"></div>
-            </div>
-        </header>
+                <article class="wiki-card">
+                    <div class="card-header blue">03 // Test Elements</div>
+                    <div class="card-body">
+                    <h2>Test-Elemente & Geräte</h2>
+                    <p>Alle Details zur Portal Gun, den gewichteten Begleiterkubussen, Geschütztürmen und Aperture-Gelen.</p>
+                    <a href="pages/mechanics/handheld-portal-device.html" class="portal-btn blue">Mechaniken entdecken →</a>
+                    </div>
+                </article>
+                </section>
 
-        <main>
+                <!-- 4. SCHNELLZUGRIFF-TERMINAL (BELIEBTE EINTRÄGE) -->
+                <section class="quick-access-panel">
+                <div class="panel-header">
+                    <span>DIRECTORY // BELIEBTE ARCHIV-AKTEN</span>
+                    <span class="panel-code">SEC-CLEARANCE: ALL</span>
+                </div>
+                <div class="quick-links-grid">
+                    <a href="pages/characters/glados.html" class="quick-tile blue">
+                    <span class="tile-tag">AI CORE</span>
+                    <strong>GLaDOS</strong>
+                    </a>
+                    <a href="pages/characters/wheatley.html" class="quick-tile orange">
+                    <span class="tile-tag">SPHERE</span>
+                    <strong>Wheatley</strong>
+                    </a>
+                    <a href="pages/mechanics/handheld-portal-device.html" class="quick-tile blue">
+                    <span class="tile-tag">DEVICE</span>
+                    <strong>Portal Gun</strong>
+                    </a>
+                    <a href="pages/mechanics/cubes.html" class="quick-tile orange">
+                    <span class="tile-tag">OBJECT</span>
+                    <strong>Companion Cube</strong>
+                    </a>
+                    <a href="pages/mechanics/turrets.html" class="quick-tile blue">
+                    <span class="tile-tag">SECURITY</span>
+                    <strong>Sentry Turrets</strong>
+                    </a>
+                    <a href="pages/mechanics/gels.html" class="quick-tile orange">
+                    <span class="tile-tag">SUBSTANCE</span>
+                    <strong>Mobility Gels</strong>
+                    </a>
+                </div>
+                </section>
 
-        </main>
-        <footer>
-            
-        </footer>
+                <!-- 5. QUIZ & BESTENLISTE -->
+                <section class="quiz-overview-section">
+                <div class="wiki-card quiz-promo-card">
+                    <div class="card-header orange">Aperture Science Eignungstest</div>
+                    <div class="card-body">
+                    <h2>Bist du bereit für die Testkammern?</h2>
+                    <p>
+                        Stelle dein Wissen über <strong>GLaDOS</strong>, <strong>Aperture Science</strong> und alle Test-Mechaniken auf die Probe. Am Ende wartet eine persönliche Auswertung – und ein Platz in der Testsubjekt-Bestenliste!
+                    </p>
+                    <div class="quiz-stats-hint">
+                        <span>📋 15 Fragen</span>
+                        <span>🏆 Lokale Highscores</span>
+                        <span>🎂 Geheime Belohnung</span>
+                    </div>
+                    <a href="quiz.html" class="portal-btn orange">Test jetzt starten →</a>
+                    </div>
+                </div>
+
+                <div class="wiki-card leaderboard-card">
+                    <div class="card-header blue">Testsubjekt-Bestenliste (Top 5)</div>
+                    <div class="card-body">
+                    <table class="leaderboard-table">
+                        <thead>
+                        <tr>
+                            <th>Rang</th>
+                            <th>Testsubjekt</th>
+                            <th>Punkte</th>
+                            <th>Datum</th>
+                        </tr>
+                        </thead>
+                        <tbody id="leaderboard-body">
+                        <tr>
+                            <td colspan="4" class="empty-board">Noch keine Testergebnisse vorhanden. Starte das Quiz!</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <button type="button" id="clearLeaderboardBtn" class="clear-btn">Bestenliste zurücksetzen</button>
+                    </div>
+                </div>
+                </section>
+
+                <!-- 6. APERTURE SCIENCE FUN-FACTS -->
+                <section class="funfact-section">
+                <div class="funfact-header">
+                    <span class="fact-badge">FACT CORE // ARCHIVE DATA</span>
+                    <button type="button" id="nextFactBtn" class="fact-btn">Nächster Fakt ↻</button>
+                </div>
+                <p id="funFactText" class="funfact-text">
+                    Lade Aperture-Datenbank...
+                </p>
+                </section>
+
+            </main>
+
+
+        <div id="footer-placeholder"></div>
+
+        <script src="assets/js/translations.js"></script>
+    <script src="assets/js/main.js"></script>
     </body>
 </html>
